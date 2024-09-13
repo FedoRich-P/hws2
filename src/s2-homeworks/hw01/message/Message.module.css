@@ -1,25 +1,51 @@
 .message {
-
+    margin-left: auto;
+    margin-bottom: 10px;
+    width: 70%;
+    color: white;
+    border-radius: 10px;
+    text-align: end;
 }
 
 .imageAndText {
-
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
 }
 
 .imageAndText img {
-
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 100%;
+    overflow: hidden;
 }
 
 .text {
-
+    position: relative;
+    padding: 10px;
+    background-color: #0066cc;
+    border-radius: 10px 10px 0 10px;
 }
 
 .text:after {
-
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px;
+    border-color: transparent transparent #0066cc transparent ;
+    z-index: 1;
 }
 
 .name {
-
+    font-weight: bold;
 }
 
 .messageText {
@@ -27,5 +53,7 @@
 }
 
 .time {
+    font-size: 0.8rem;
 
+    color: #000;
 }
