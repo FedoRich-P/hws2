@@ -14,9 +14,11 @@
 }
 
 .friendImageAndText img {
+    margin-bottom: 5px;
+    align-self: end;
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border: 1px solid white;
     border-radius: 100%;
     overflow: hidden;
@@ -24,9 +26,10 @@
 
 .friendText {
     position: relative;
-    padding: 10px;
-    background-color: rgba(204, 204, 204, 0.35);
+    padding: 8px 20px;
+    background-color: var(--second-color);
     border-radius: 10px 10px 10px 0;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .friendText:after {
@@ -39,7 +42,7 @@
     height: 0;
     border-style: solid;
     border-width: 16px;
-    border-color: transparent transparent rgba(204, 204, 204, 0.27) transparent ;
+    border-color: transparent transparent var(--second-color) transparent ;
     z-index: 1;
 }
 
@@ -52,6 +55,7 @@
 }
 
 .friendTime {
-    font-size: 0.8rem;
+    padding-left: 11px;
+    font-size: 10px;
     color: #000;
 }

@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #0066CC;
+    --second-color: #f5f7fb;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +26,32 @@ code {
     monospace;
 }
 
-.App_hw__38gvB {
-    margin: 0 auto;
-    max-width: 700px;
+
+#hw1 {
+    margin: 0 auto 100px;
+    padding: 10px 70px;
+    max-width: 1200px;
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.App_hwTitle__YcOXY {
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.App_hw__38gvB {
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    border-bottom: 2px solid #d9d9d9;
+}
+

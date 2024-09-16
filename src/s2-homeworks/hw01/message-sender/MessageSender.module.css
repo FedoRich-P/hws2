@@ -7,15 +7,17 @@
 
 .textarea {
     width: 70%;
-    min-height: 40px;
-    padding: 10px 15px;
-    border-radius: 25px;
+    min-height: 41px;
+    padding: 12px 24px;
+    border-radius: 20px;
     resize: none;
+    border: transparent;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
 }
 
 .button {
-    padding: 8px 30px;
-    background-color: #0066cc;
+    padding: 10px 39px;
+    background-color: var(--primary-color);
     color: white;
     border: transparent;
     border-radius: 25px;
