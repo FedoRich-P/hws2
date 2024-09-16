@@ -14,7 +14,6 @@
 }
 
 .friendImageAndText img {
-    margin-bottom: 5px;
     align-self: end;
     flex-shrink: 0;
     width: 48px;
