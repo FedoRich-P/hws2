@@ -47,6 +47,8 @@ code {
 }
 
 .App_hw__38gvB {
+    margin: 0 auto;
+    max-width: 1000px;
     padding-bottom: 32px;
     display: flex;
     flex-direction: column;
