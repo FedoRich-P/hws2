@@ -1,10 +1,13 @@
 .item {
+    /*display: inline-table;*/
+    /*padding: 16px 17px;*/
 }
 
 .item:last-of-type {
 }
 
 .users {
+    width: 606px;
 }
 
 .buttonsContainer {
@@ -14,10 +17,22 @@
 }
 
 .thead {
+    background-color: #E5E5E5;
+    width: 100%;
+
+    tr td{
+        font-weight: bold;
+    }
 }
 
 .nameCol {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
 }
 
 .ageCol {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
 }
