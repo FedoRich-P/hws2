@@ -14,14 +14,11 @@ function HW11() {
     // for autotests // не менять // можно подсунуть в локалСторэдж нужные числа, чтоб увидеть как они отображаются
     const [value1, setValue1] = useState(restoreState<number>('hw11-value1', 0))
     const [value2, setValue2] = useState(restoreState<number>('hw11-value2', 100))
-    const [value, setValue] = useState<number[]>([0, 100]);
 
     const change = (event: Event, value: number | number[]) => {
         if (Array.isArray(value)) {
-            console.log(value)
             setValue1(value[0])
             setValue2(value[1])
-            setValue([value[0], value[1]])
         } else {
             setValue1(value)
         }
@@ -47,7 +44,7 @@ function HW11() {
                         <SuperRange
                             id={'hw11-double-slider'}
                             getAriaLabel={() => 'Temperature range'}
-                            value={value}
+                            value={[value1, value2]}
                             onChange={change}
                             valueLabelDisplay="auto"
 
