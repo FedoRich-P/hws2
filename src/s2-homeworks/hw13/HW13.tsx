@@ -59,7 +59,6 @@ const HW13 = () => {
                 setImage(error500)
                 setText(e.response.data.errorText)
                 setInfo(e.response.data.info)
-
             })
     }
 
