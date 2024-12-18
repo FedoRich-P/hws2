@@ -14,7 +14,7 @@ import HW12  from "../s2-homeworks/hw12/HW12";
 import HW13 from "../s2-homeworks/hw13/HW13";
 import HW14 from "../s2-homeworks/hw14/HW14";
 import {ThemeProvider} from "@mui/material";
-import {BrowserRouter, Router} from "react-router-dom";
+import {BrowserRouter, HashRouter, Router} from "react-router-dom";
 
 
 function App() {
@@ -36,9 +36,9 @@ function App() {
                 <HW11/>
                 <HW12/>
                 <HW13/>
-                <BrowserRouter>
+                <HashRouter>
                     <HW14/>
-                </BrowserRouter>
+                </HashRouter>
             {/*</ThemeProvider>*/}
         </div>
     )
