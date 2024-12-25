@@ -44,9 +44,8 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         sort, value, onChange, id = 'hw15',
     }
 ) => {
-    const up = value + '-up'
-    const down = value + '-down'
-
+    const up = value;
+    const down = `-${value}`;
 
     const onChangeCallback = () => {
         onChange(pureChange(sort, down, up))
