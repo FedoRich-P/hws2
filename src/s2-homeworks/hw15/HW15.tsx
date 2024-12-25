@@ -49,7 +49,6 @@ const HW15 = () => {
     const [techs, setTechs] = useState<TechType[]>([])
 
     const sendQuery = (params: any) => {
-        console.log(params)
         setLoading(true)
         getTechs(params)
             .then((res) => {
@@ -64,15 +63,15 @@ const HW15 = () => {
     const onChangePagination = (newPage: number, newCount: number) => {
         setPage(newPage)
         setCount(newCount)
-        sendQuery({ sort, page: newPage, count: newCount })
-        setSearchParams({ page: newPage.toString(), count: newCount.toString(), sort })
+        sendQuery({sort, page: newPage, count: newCount})
+        setSearchParams({page: newPage.toString(), count: newCount.toString(), sort})
     }
 
     const onChangeSort = (newSort: string) => {
         setSort(newSort)
         setPage(1)
-        sendQuery({ sort: newSort, page: 1, count })
-        setSearchParams({ page: '1', count: count.toString(), sort: newSort })
+        sendQuery({sort: newSort, page: 1, count})
+        setSearchParams({page: '1', count: count.toString(), sort: newSort})
     }
 
     useEffect(() => {
