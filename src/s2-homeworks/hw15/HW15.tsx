@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {log} from "node:util";
 
 /*
 * 1 - дописать SuperPagination
@@ -52,7 +53,11 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                if (res?.data?.techs) {
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                }
+                setLoading(false)
                 // сохранить пришедшие данные
 
                 //
@@ -60,6 +65,12 @@ const HW15 = () => {
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
+
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({ sort, page: newPage, count: newCount })
+        setSearchParams({ page: newPage.toString(), count: newCount.toString(), sort })
+
         // делает студент
 
         // setPage(
@@ -72,6 +83,11 @@ const HW15 = () => {
     }
 
     const onChangeSort = (newSort: string) => {
+        console.log(newSort)
+        setSort(newSort)
+        setPage(1)
+        sendQuery({ sort: newSort, page: 1, count })
+        setSearchParams({ page: '1', count: count.toString(), sort: newSort })
         // делает студент
 
         // setSort(
